@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DatatableComponent } from './datatable.component';
+import {DashboardModule} from "../../../modules/dashboard/dashboard.module";
 
 describe('DatatableComponent', () => {
   let component: DatatableComponent;
@@ -8,7 +9,8 @@ describe('DatatableComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DatatableComponent]
+      imports: [DashboardModule],
+      declarations: [],
     });
     fixture = TestBed.createComponent(DatatableComponent);
     component = fixture.componentInstance;
