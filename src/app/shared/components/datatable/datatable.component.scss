@@ -1,0 +1,24 @@
+.table {
+  background-color: white;
+  margin: 5px;
+  border: 1px solid #188802;
+  border-radius: 5px;
+  .table-header {
+    padding: 5px;
+    background-color: #188802;
+    color:white;
+    text-transform: uppercase;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    .table-header-name {
+      font-size: 1.3rem;
+    }
+  }
+  .table-actions {
+    padding: 5px;
+  }
+  .mat-mdc-table {
+    width: 100%;
+    font-size: 12px;
+  }
+}

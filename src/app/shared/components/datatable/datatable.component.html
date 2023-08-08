@@ -1,0 +1,18 @@
+<div class="table">
+  <div class="table-header">
+    <h2 class="table-header-name">{{name}}</h2>
+  </div>
+  <div class="table-actions" *ngFor="let action of actions">
+      <button mat-stroked-button color="primary" (click)="emitAction(action)"><mat-icon fontIcon="add"></mat-icon>Add Plan</button>
+  </div>
+  <mat-table #table [dataSource]="dataSource" matSort>
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header>{{ column.header }}</mat-header-cell>
+      <mat-cell *cdkCellDef="let row">{{ row[column.columnDef] }}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <!--<mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>-->
+</div>
+

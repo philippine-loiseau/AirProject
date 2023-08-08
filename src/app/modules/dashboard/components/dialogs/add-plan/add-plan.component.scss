@@ -1,0 +1,19 @@
+.dialog {
+  .dialog-header {
+    background-color: #188802;
+    .dialog-header-name {
+      color:white;
+      font-size: 1.3rem;
+    }
+  }
+  .dialog-content {
+    padding: 2vh;
+    .form-group {
+      padding: 5px;
+    }
+  }
+  .dialog-actions {
+    text-align: center;
+  }
+}
+
